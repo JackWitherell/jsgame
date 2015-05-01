@@ -1,17 +1,14 @@
 void setup(){
   size(580,360);
 }
-
 keycontrol keys= new keycontrol();
-void keyPressed(){
-  keys.insert(keyCode);
-}
-void keyReleased(){
-  keys.takeout(keyCode);
-}
-
+backgrounds bkgd= new backgrounds();
+void keyPressed(){keys.insert(keyCode);}
+void keyReleased(){keys.takeout(keyCode);}
 void draw(){
-  fill (0);
-  rect(0,0,579,359);
+/*update background*/
+  //bkgd.blank();
+  bkgd.hills();
+/*display keys pressed alongside priority in upper right*/
   keys.debugkeys();
 }
