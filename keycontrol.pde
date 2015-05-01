@@ -1,26 +1,3 @@
-void setup(){
-  size(580,360);
-}
-
-keycontrol keys= new keycontrol();
-
-void keyPressed(){
-  keys.insert(keyCode);
-}
-void keyReleased(){
-  keys.takeout(keyCode);
-}
-
-void draw(){
-  fill (0);
-  rect(0,0,579,359);
-  /*fill (255);
-  textSize(32);
-  for (int i=0;i<=keys.getlength();i++){
-    text(keys.getkey(i), 10,30*(i+1));
-  }*/
-  keys.debugkeys();
-}
 class keycontrol{
   int[] keys={0,0,0,0,0};
   int currentkey=0;
@@ -67,4 +44,3 @@ class keycontrol{
     }
   }
 }
-
